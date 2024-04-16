@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/records.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <title>Controle Patrimonial</title>
+</head>
+<body>
+    <header>
+        <img id="img-title" src="img/logo2.png" alt="">
+        <h1 class="header-title">Controle Patrimonial</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarItem">Cadastrar Item</button>
+        <table id="tableItem" class="records">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Referência</th>
+                    <th>Descrição</th>
+                    <th>Patrimônio</th>
+                    <th>Situação</th>
+                    <th>Data Cadastro</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        
+
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Item</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" id="nomeItem" class="modal-field" data-index="new" placeholder="Nome do Item" required>
+                    <input type="text" id="marcaItem" class="modal-field" placeholder="Marca do Item" required>
+                    <input type="text" id="modeloItem" class="modal-field" placeholder="Modelo do Item" required>
+                    <input type="text" id="referenciaItem" class="modal-field" placeholder="Referência do Item" required>
+                    <input type="text" id="descricaoItem" class="modal-field" placeholder="Descrição do Item" required>
+                    <select name="Situação do Item" id="situacaoItem" class="modal-field" required>
+                        <option value="">Indique a situação do item</option>
+                        <option value="Ativo">Ativo</option>
+                        <option value="Em uso">Em Uso</option>
+                        <option value="Baixa">Baixa</option>
+                    </select>
+                </form>
+                <footer class="modal-footer">
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue">Cancelar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright &copy; Jorge Freitas
+    </footer>
+
+    <script src="https://unpkg.com/jsbarcode@latest/dist/JsBarcode.all.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
